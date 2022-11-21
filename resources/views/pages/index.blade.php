@@ -14,13 +14,16 @@
         rel="stylesheet">
 
     <!-- bootsrap css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- custom css -->
     <link rel="stylesheet" href="style.css">
 
     <!-- bootstrap js -->
-
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
     <!-- font-awesome -->
     <script defer src="https://use.fontawesome.com/releases/v6.2.0/js/all.js"></script>
 
@@ -55,14 +58,37 @@
 
                 </ul>
 
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{ route('customerLoginPage') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="{{ route('customerRegisterPage') }}">Register</a>
-                    </li>
-                </ul>
+                @guest('customer')
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ route('customerLoginPage') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ route('customerRegisterPage') }}">Register</a>
+                        </li>
+                    </ul>
+                @else
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Setting
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('customerDashboard') }}">Profile</a></li>
+                            <li>
+                                <form action="{{ route('customerLogout') }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    {{-- <form action="{{ route('customerLogout') }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form> --}}
+                @endguest
+
             </div>
         </div>
     </nav>
@@ -207,7 +233,7 @@
         <p>© Copyright 2022 Pizzaria</p>
 
         <a href="{{ route('login') }}" style="color:white;text-decoration:none;">
-            <p>admin</p>
+            <p>Admin</p>
         </a>
     </footer>
 

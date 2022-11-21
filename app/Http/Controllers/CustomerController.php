@@ -46,7 +46,7 @@ class CustomerController extends Controller
             return back()->with('error' , 'Invalid username or password');
         }
 
-        return redirect()->route('customerDashboard');
+        return redirect()->route('index');
     }
 
     public function dashboard(){
@@ -55,6 +55,6 @@ class CustomerController extends Controller
 
     public function logout(){
         Auth::guard ('customer')->logout();
-        return redirect('customer/login');
+        return redirect()->route('index');
     }
 }
