@@ -41,7 +41,7 @@ Route::group(['prefix' => 'admin',  'middleware' => 'auth'], function () {
 
   Route::view('/react', 'admin.react');
 
-  Route::resource('tasks', 'AdminTasksController', ['as' => 'admin']);
+  Route::resource('/tasks', 'AdminTasksController', ['as' => 'admin']);
 });
 
 Route::group(['prefix' => 'customer'], function () {

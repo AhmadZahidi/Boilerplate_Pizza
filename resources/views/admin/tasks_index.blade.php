@@ -44,7 +44,7 @@
                             @csrf
                             <input type="submit" value="Update" class="btn btn-primary" style="margin:4px;">
                         </form>
-                        <form action="{{ route('admin.tasks.destroy', $task->id) }}" method="POST" style="margin:4px;>
+                        <form action="{{ route('admin.tasks.destroy', $task->id) }}" method="POST" style="margin:4px;">
                             @csrf
                             @method('DELETE')
                             <input type="submit" value="Delete" class="btn btn-primary">
