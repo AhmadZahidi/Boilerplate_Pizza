@@ -63,3 +63,7 @@ Route::resource('/', ContactController::class)->only(['index', 'store']);
 Route::get('/menu', function () {
   return view('pages.menu', ['post' => Product::all()]);
 });
+
+Route::get('/test',function(){
+  return view('test');
+});

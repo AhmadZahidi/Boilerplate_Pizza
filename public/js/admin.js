@@ -100,9 +100,9 @@ var overlay = document.querySelector('#overlay');
 var fadeElems = document.querySelectorAll('.can-fade');
 btnHamburger.addEventListener('click', function () {
   console.log('click hamburger');
-
   if (sidebar.classList.contains('active')) {
     // Close Hamburger Menu
+
     body.classList.remove('noscroll');
     sidebar.classList.remove('active');
     fadeElems.forEach(function (element) {
@@ -113,6 +113,7 @@ btnHamburger.addEventListener('click', function () {
     overlay.classList.remove('visible');
   } else {
     // Open Hamburger Menu
+
     body.classList.add('noscroll');
     sidebar.classList.add('active');
     fadeElems.forEach(function (element) {
@@ -155,9 +156,9 @@ btnHamburger.addEventListener('click', function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/hijazi/Laravel/mvp/ir_laravel_boilerplate/resources/js/admin/admin.js */"./resources/js/admin/admin.js");
-__webpack_require__(/*! /Users/hijazi/Laravel/mvp/ir_laravel_boilerplate/resources/sass/app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! /Users/hijazi/Laravel/mvp/ir_laravel_boilerplate/resources/sass/admin/admin.scss */"./resources/sass/admin/admin.scss");
+__webpack_require__(/*! D:\Utilities_software\laragon\www\pizza\resources\js\admin\admin.js */"./resources/js/admin/admin.js");
+__webpack_require__(/*! D:\Utilities_software\laragon\www\pizza\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! D:\Utilities_software\laragon\www\pizza\resources\sass\admin\admin.scss */"./resources/sass/admin/admin.scss");
 
 
 /***/ })

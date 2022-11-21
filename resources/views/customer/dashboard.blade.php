@@ -10,5 +10,14 @@
                 <button type="submit" class="btn btn-primary">Logout</button>
             </form>
         </div>
+
+        {{-- <script src="{{ asset('js/app.js') }}" defer></script>
+        <div id="FromApp"></div> --}}
+
+        <div id="FromMix"></div>
+        <script src="{{ mix('js/FromMix.js') }}"></script>
+
+        <div id="root"></div>
+        <script src="{{ mix('js/TestPage.js') }}"></script>
     </div>
 @endsection

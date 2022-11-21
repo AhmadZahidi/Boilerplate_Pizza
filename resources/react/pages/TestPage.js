@@ -1,56 +1,46 @@
-import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
 
-import CalendarHeatmap from 'react-calendar-heatmap'
-import 'react-calendar-heatmap/dist/styles.css'
+import CalendarHeatmap from "react-calendar-heatmap";
+import "react-calendar-heatmap/dist/styles.css";
 
-import axios from 'axios'
+import axios from "axios";
 
-import uuid from 'uuid/v4'
+// import uuid from "uuid/v4";
 
 class TestPage extends Component {
+    constructor(props) {
+        super(props);
 
-  constructor(props){
-    super(props);
-
-    this.state = {
-      order_id: props.order_id,
-      title: 'Hello World as',
+        this.state = {
+            order_id: props.order_id,
+            title: "Hello World as"
+        };
     }
 
-  }
+    componentDidMount() {}
 
-  componentDidMount() {
+    render() {
+        return (
+            <React.Fragment>
+                <div className="container">
+                    <h1>{this.state.title}</h1>
+                    <button
+                        className="btn btn-primary btn-sm"
+                        onClick={() => {
+                            // alert('Hello');
 
-  }
-
-
-  render() {
-    return (
-    <React.Fragment>
-    <div className="container">
-      <h1>{this.state.title}</h1>
-        <button className="btn btn-primary btn-sm"
-            onClick={()=>{
-
-                // alert('Hello');
-
-                this.setState({
-                    title: "Hello ABC"
-                })
-
-            }}
-        >Hello</button>
-
-        <hr/>
-
-      {this.props.order_id} /
-
-      {this.state.order_id}
-
-
-      {/* <h3>Heatmap</h3> */}
-{/*
+                            this.setState({
+                                title: "Hello ABC"
+                            });
+                        }}
+                    >
+                        Hello
+                    </button>
+                    <hr />
+                    {this.props.order_id} /{this.state.order_id}
+                    {/* <h3>Heatmap</h3> */}
+                    {/*
       <CalendarHeatmap
         startDate={new Date('2021-01-01')}
         endDate={new Date('2021-12-31')}
@@ -61,20 +51,17 @@ class TestPage extends Component {
           // ...and so on
         ]}
       /> */}
-
-    </div>
-    </React.Fragment>
-    );
-  }
-
+                </div>
+            </React.Fragment>
+        );
+    }
 }
 
 export default TestPage;
 
 if (document.getElementById("root")) {
+    const element = document.getElementById("root");
+    const props = Object.assign({}, element.dataset);
 
-  const element = document.getElementById('root');
-  const props = Object.assign({},element.dataset);
-
-  ReactDOM.render(<TestPage {...props} />, document.getElementById("root"));
+    ReactDOM.render(<TestPage {...props} />, document.getElementById("root"));
 }

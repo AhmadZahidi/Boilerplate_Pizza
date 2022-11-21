@@ -76,7 +76,7 @@
   padding: 8px;
   font-size: 10px;
   margin-bottom: -8px;
-  color: #b1b1b1;
+  color: rgb(177, 177, 177);
 }
 
 @media (max-width: 768px) {
@@ -119,23 +119,6 @@
   visibility: visible;
 }
 
-@-webkit-keyframes fade-in {
-  from {
-    visibility: hidden;
-    opacity: 0;
-  }
-
-  1% {
-    visibility: visible;
-    opacity: 0;
-  }
-
-  to {
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
 @keyframes fade-in {
   from {
     visibility: hidden;
@@ -154,25 +137,7 @@
 }
 
 .fade-in {
-  -webkit-animation: fade-in 200ms ease-in-out forwards;
-          animation: fade-in 200ms ease-in-out forwards;
-}
-
-@-webkit-keyframes fade-out {
-  from {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  99% {
-    visibility: visible;
-    opacity: 0;
-  }
-
-  to {
-    visibility: hidden;
-    opacity: 0;
-  }
+  animation: fade-in 200ms ease-in-out forwards;
 }
 
 @keyframes fade-out {
@@ -193,22 +158,11 @@
 }
 
 .fade-out {
-  -webkit-animation: fade-out 200ms ease-in-out forwards;
-          animation: fade-out 200ms ease-in-out forwards;
+  animation: fade-out 200ms ease-in-out forwards;
 }
 
 .can-slide-left {
   visibility: hidden;
-}
-
-@-webkit-keyframes slide-in {
-  from {
-    translate: translateX(-30px);
-  }
-
-  to {
-    translate: translateX(0px);
-  }
 }
 
 @keyframes slide-in {
@@ -222,18 +176,7 @@
 }
 
 .fade-in {
-  -webkit-animation: slide-in 1200ms ease-in-out forwards;
-          animation: slide-in 1200ms ease-in-out forwards;
-}
-
-@-webkit-keyframes slide-out {
-  from {
-    translate: translateX(0px);
-  }
-
-  to {
-    translate: translateX(-30px);
-  }
+  animation: slide-in 1200ms ease-in-out forwards;
 }
 
 @keyframes slide-out {
@@ -247,8 +190,7 @@
 }
 
 .slide-out {
-  -webkit-animation: slide-out 1200ms ease-in-out forwards;
-          animation: slide-out 1200ms ease-in-out forwards;
+  animation: slide-out 1200ms ease-in-out forwards;
 }
 
 .admin-navbar {
@@ -272,7 +214,7 @@
 }
 
 .admin-navbar span {
-  color: #1d1d1d;
+  color: rgb(29, 29, 29);
   font-weight: bold;
 }
 
@@ -294,7 +236,7 @@
 
 #content-wrapper {
   width: 100%;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   padding-left: 230px;
   margin-top: 56px;
 }
