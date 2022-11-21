@@ -1,13 +1,13 @@
 import React from "react";
-import ReactDOM from "react";
+import ReactDOM from "react-dom";
 
-const FromApp = () => {
+function FromApp() {
     return (
         <div>
-            <h1>Component register in app.js</h1>
+            <h1>Component register in App.js</h1>
         </div>
     );
-};
+}
 
 export default FromApp;
 

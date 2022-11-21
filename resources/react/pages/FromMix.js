@@ -4,8 +4,7 @@ import ReactDOM from "react-dom";
 function FromMix() {
     return (
         <div>
-            <h1>Component register in app.js</h1>
-            <h2>d</h2>
+            <h1>Component register in Mix.js</h1>
         </div>
     );
 }

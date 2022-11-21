@@ -28630,7 +28630,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function FromMix() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Component register in app.js"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "d"));
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Component register in Mix.js"));
 }
 /* harmony default export */ __webpack_exports__["default"] = (FromMix);
 if (document.getElementById("FromMix")) {

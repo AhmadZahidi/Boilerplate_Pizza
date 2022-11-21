@@ -19,6 +19,9 @@
 </head>
 
 <body>
+    {{-- navigation --}}
+    @include('layouts.navbar')
+
     <div class="container">
         <div class="row">
             <div class="col">
