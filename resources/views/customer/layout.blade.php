@@ -22,7 +22,7 @@
     {{-- navigation --}}
     @include('layouts.navbar')
 
-    <div class="container">
+    <div class="container mt-3">
         <div class="row">
             <div class="col">
                 @yield('content')

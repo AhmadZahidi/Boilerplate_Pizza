@@ -20,5 +20,7 @@ mix.js("resources/js/admin/admin.js", "public/js");
 
 mix.sass("resources/sass/admin/admin.scss", "public/css");
 
-mix.react("resources/react/pages/FromMix.js", "public/js/").version();
-mix.react("resources/react/pages/TestPage.js", "public/js/").version();
+// mix.react("resources/react/pages/FromMix.js", "public/js/").version();
+// mix.react("resources/react/pages/TestPage.js", "public/js/").version();
+
+mix.react("resources/js/Customer/ProfileOption.js", "public/js").version();

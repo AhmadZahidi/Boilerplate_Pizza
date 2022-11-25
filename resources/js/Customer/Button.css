@@ -1,0 +1,9 @@
+.clicked {
+    background-color: #c123de;
+    color: #ffffff;
+}
+
+.notClicked {
+    background-color: #ffffff;
+    color: #c123de;
+}
