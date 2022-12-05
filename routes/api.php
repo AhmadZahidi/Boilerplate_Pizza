@@ -24,3 +24,9 @@ Route::group(['middleware' => 'api'], function () {
   Route::get('test_data','TestAPIController@test_data');    
 
 });
+
+Route::group(['middleware' => 'api', 'prefix' => 'customer'], function () {
+
+  Route::get('me','CustomerAPIController@me');
+  
+  });
