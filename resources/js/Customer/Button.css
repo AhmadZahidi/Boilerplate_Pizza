@@ -1,9 +1,9 @@
-.clicked {
+.notClicked {
     background-color: #c123de;
     color: #ffffff;
 }
 
-.notClicked {
+.clicked {
     background-color: #ffffff;
     color: #c123de;
 }

@@ -98,7 +98,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, ".clicked {\r\n    background-color: #c123de;\r\n    color: #ffffff;\r\n}\r\n\r\n.notClicked {\r\n    background-color: #ffffff;\r\n    color: #c123de;\r\n}\r\n", ""]);
+exports.push([module.i, ".notClicked {\r\n    background-color: #c123de;\r\n    color: #ffffff;\r\n}\r\n\r\n.clicked {\r\n    background-color: #ffffff;\r\n    color: #c123de;\r\n}\r\n", ""]);
 
 // exports
 
@@ -29274,6 +29274,46 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Button_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button.css */ "./resources/js/Customer/Button.css");
 /* harmony import */ var _Button_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Button_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+var Button = function Button(props) {
+  var buttonIsClicked = function buttonIsClicked() {
+    props.condition(true);
+  };
+  var buttonIsNotClicked = function buttonIsNotClicked() {
+    props.condition(false);
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !props.isClick && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "clicked",
+    onClick: buttonIsClicked
+  }, props.name), props.isClick && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "notClicked",
+    onClick: buttonIsNotClicked,
+    disabled: true
+  }, props.name));
+};
+/* harmony default export */ __webpack_exports__["default"] = (Button);
+
+/***/ }),
+
+/***/ "./resources/js/Customer/ProfileOption.js":
+/*!************************************************!*\
+  !*** ./resources/js/Customer/ProfileOption.js ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button */ "./resources/js/Customer/Button.js");
+/* harmony import */ var _ShowDashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ShowDashboard */ "./resources/js/Customer/ShowDashboard.js");
+/* harmony import */ var _ShowOrderHistory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ShowOrderHistory */ "./resources/js/Customer/ShowOrderHistory.js");
+/* harmony import */ var _ShowUpdateProfile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ShowUpdateProfile */ "./resources/js/Customer/ShowUpdateProfile.js");
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
 }
@@ -29325,74 +29365,58 @@ function _arrayWithHoles(arr) {
 
 
 
-var Button = function Button(props) {
-  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])("false"),
-    _useState2 = _slicedToArray(_useState, 2),
-    isClicked = _useState2[0],
-    setIsClicked = _useState2[1];
-  var buttonClicked = function buttonClicked() {
-    setIsClicked(true);
-  };
-  var buttonNotClicked = function buttonNotClicked() {
-    setIsClicked(false);
-  };
-
-  // const [DashboardIsClicked, setDashboardIsClicked] = useState("true");
-  // const [OrderHistoryIsClicked, setOrderHistoryIsClicked] = useState("false");
-  // const [UpdateProfileIsClicked, setUpdateProfileIsClicked] =
-  //     useState("false");
-
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, !isClicked && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "clicked",
-    onClick: buttonClicked
-  }, props.name), isClicked && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-    className: "notClicked",
-    onClick: buttonNotClicked
-  }, props.name));
-};
-/* harmony default export */ __webpack_exports__["default"] = (Button);
-
-/***/ }),
-
-/***/ "./resources/js/Customer/ProfileOption.js":
-/*!************************************************!*\
-  !*** ./resources/js/Customer/ProfileOption.js ***!
-  \************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Button */ "./resources/js/Customer/Button.js");
-/* harmony import */ var _ShowDashboard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ShowDashboard */ "./resources/js/Customer/ShowDashboard.js");
-/* harmony import */ var _ShowOrderHistory__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ShowOrderHistory */ "./resources/js/Customer/ShowOrderHistory.js");
-/* harmony import */ var _ShowUpdateProfile__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ShowUpdateProfile */ "./resources/js/Customer/ShowUpdateProfile.js");
-
-
-
 
 
 
 var ProfileOption = function ProfileOption() {
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(true),
+    _useState2 = _slicedToArray(_useState, 2),
+    clickedDashboard = _useState2[0],
+    setClickedDashboard = _useState2[1];
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+    _useState4 = _slicedToArray(_useState3, 2),
+    clickedOrder = _useState4[0],
+    setClickedOrder = _useState4[1];
+  var _useState5 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false),
+    _useState6 = _slicedToArray(_useState5, 2),
+    clickedUpdate = _useState6[0],
+    setClickedUpdate = _useState6[1];
+  var updateDashboard = function updateDashboard(value) {
+    setClickedDashboard(value);
+    setClickedOrder(!value);
+    setClickedUpdate(!value);
+  };
+  var updateOrder = function updateOrder(value) {
+    setClickedDashboard(!value);
+    setClickedOrder(value);
+    setClickedUpdate(!value);
+  };
+  var updateProfile = function updateProfile(value) {
+    setClickedDashboard(!value);
+    setClickedOrder(!value);
+    setClickedUpdate(value);
+  };
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "row"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-3"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "d-flex flex-column"
+    className: "d-flex flex-column bg-light d-grid gap-2"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "Dashboard"
+    name: "Dashboard",
+    isClick: clickedDashboard,
+    condition: updateDashboard
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "Order History"
+    name: "Order History",
+    isClick: clickedOrder,
+    condition: updateOrder
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Button__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    name: "Update Profile"
+    name: "Update Profile",
+    isClick: clickedUpdate,
+    condition: updateProfile
   }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "col-9"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowUpdateProfile__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
+  }, clickedDashboard && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowDashboard__WEBPACK_IMPORTED_MODULE_3__["default"], null), clickedOrder && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowOrderHistory__WEBPACK_IMPORTED_MODULE_4__["default"], null), clickedUpdate && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ShowUpdateProfile__WEBPACK_IMPORTED_MODULE_5__["default"], null)));
 };
 /* harmony default export */ __webpack_exports__["default"] = (ProfileOption);
 if (document.getElementById("ProfileOption")) {

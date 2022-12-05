@@ -3,30 +3,27 @@ import ReactDOM from "react-dom";
 import "./Button.css";
 
 const Button = (props) => {
-    const [isClicked, setIsClicked] = useState("false");
-
-    const buttonClicked = () => {
-        setIsClicked(true);
+    const buttonIsClicked = () => {
+        props.condition(true);
     };
 
-    const buttonNotClicked = () => {
-        setIsClicked(false);
+    const buttonIsNotClicked = () => {
+        props.condition(false);
     };
-
-    // const [DashboardIsClicked, setDashboardIsClicked] = useState("true");
-    // const [OrderHistoryIsClicked, setOrderHistoryIsClicked] = useState("false");
-    // const [UpdateProfileIsClicked, setUpdateProfileIsClicked] =
-    //     useState("false");
 
     return (
         <div>
-            {!isClicked && (
-                <button className="clicked" onClick={buttonClicked}>
+            {!props.isClick && (
+                <button className="clicked" onClick={buttonIsClicked}>
                     {props.name}
                 </button>
             )}
-            {isClicked && (
-                <button className="notClicked" onClick={buttonNotClicked}>
+            {props.isClick && (
+                <button
+                    className="notClicked"
+                    onClick={buttonIsNotClicked}
+                    disabled={true}
+                >
                     {props.name}
                 </button>
             )}
