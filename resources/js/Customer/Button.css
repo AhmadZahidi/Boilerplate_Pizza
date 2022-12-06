@@ -1,9 +1,11 @@
 .notClicked {
     background-color: #c123de;
     color: #ffffff;
+    border: 0cm;
 }
 
 .clicked {
     background-color: #ffffff;
     color: #c123de;
+    border: 0cm;
 }

@@ -12,5 +12,5 @@ class CustomerAPIController extends Controller
         $data = $customer;
         return response()->json($data, 200);
         }
-        
+    
 }

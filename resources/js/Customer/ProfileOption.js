@@ -50,7 +50,7 @@ const ProfileOption = () => {
                 </div>
             </div>
 
-            <div className="col-9">
+            <div className="col-9 bg-light ps-3 py-3">
                 {clickedDashboard && <ShowDashboard />}
                 {clickedOrder && <ShowOrderHistory />}
                 {clickedUpdate && <ShowUpdateProfile />}

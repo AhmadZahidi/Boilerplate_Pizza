@@ -19,7 +19,9 @@ class CustomerController extends Controller
         $data=$request->validate([
             'name'=>'required | min:5|max:255',
             'email'=>'required | email',
-            'password'=>'required | confirmed |min:8'
+            'password'=>'required | confirmed |min:8',
+            'phoneNumber'=>'required',
+            'address'=>'required',
         ]);
 
         $data['password']=Hash::make($data['password']);
