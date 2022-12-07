@@ -1,21 +1,40 @@
-import React from "react";
+import axios from "axios";
+
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react";
 
 const ShowDashboard = () => {
+    const [customers, setCustomers] = useState([]);
+
+    useEffect(() => {
+        fetchProduct();
+    });
+
+    const fetchProduct = () => {
+        axios.get("/api/customer/me").then(({ data }) => {
+            setCustomers(data);
+        });
+    };
+
     return (
         <div>
-            <h1>Customer Name</h1>
+            {customers.length > 0 &&
+                customers.map((cust, key) => (
+                    <div key={key}>
+                        <h1>{cust.name}</h1>
 
-            <form className="mt-5">
-                <h2>Email</h2>
-                <label>Customer Email</label>
+                        <form className="mt-5">
+                            <h2>Email</h2>
+                            <label>{cust.email}</label>
 
-                <h2>Phone Number</h2>
-                <label>Customer Phone Number</label>
+                            <h2>Phone Number</h2>
+                            <label>{cust.phoneNumber}</label>
 
-                <h2>Address</h2>
-                <label>Customer Address</label>
-            </form>
+                            <h2>Address</h2>
+                            <label>{cust.address}</label>
+                        </form>
+                    </div>
+                ))}
         </div>
     );
 };

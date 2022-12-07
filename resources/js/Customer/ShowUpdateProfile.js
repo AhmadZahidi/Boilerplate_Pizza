@@ -8,10 +8,11 @@ const ShowUpdateProfile = () => {
     const sendData = async (e) => {
         e.preventDefault();
 
-        const formData = new FormData();
-        formData.append("name", name);
+        const formData = {
+            name: name,
+        };
 
-        axios.post(`http://localhost:8000/api/customer/me`, formData);
+        axios.get("/api/customer/me", formData).then((res) => console.log(res));
     };
 
     return (
