@@ -1,7 +1,5 @@
 import axios from "axios";
-
 import React, { useEffect, useState } from "react";
-import ReactDOM from "react";
 
 const ShowDashboard = () => {
     const [customers, setCustomers] = useState([]);
@@ -10,8 +8,9 @@ const ShowDashboard = () => {
         fetchProduct();
     });
 
-    const fetchProduct = () => {
-        axios.get("/api/customer/me").then(({ data }) => {
+    const fetchProduct = async () => {
+        await axios.get("/api/customer/me").then(({ data }) => {
+            console.log(data);
             setCustomers(data);
         });
     };
@@ -35,6 +34,7 @@ const ShowDashboard = () => {
                         </form>
                     </div>
                 ))}
+            {}
         </div>
     );
 };

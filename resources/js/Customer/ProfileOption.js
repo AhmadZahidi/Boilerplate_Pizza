@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import Button from "./Button";
-import ShowDashboard from "./ShowDashboard";
+import ShowDashboardClass from "./ShowDashboardClass";
 import ShowOrderHistory from "./ShowOrderHistory";
 import ShowUpdateProfile from "./ShowUpdateProfile";
 
@@ -51,7 +51,7 @@ const ProfileOption = () => {
             </div>
 
             <div className="col-9 bg-light ps-3 py-3">
-                {clickedDashboard && <ShowDashboard />}
+                {clickedDashboard && <ShowDashboardClass />}
                 {clickedOrder && <ShowOrderHistory />}
                 {clickedUpdate && <ShowUpdateProfile />}
             </div>

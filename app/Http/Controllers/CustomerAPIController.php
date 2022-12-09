@@ -16,7 +16,8 @@ class CustomerAPIController extends Controller
 
     public function index(){
         $customer = Auth::guard('customer')->user();
-        return Customer::all()->where('id','=',$customer->id);
+        $data = $customer;
+        return response()->json($data, 200);
     }
 
     public function shows(Customer $customer){
