@@ -13,7 +13,7 @@ class ShowDashboardClass extends Component {
     }
 
     componentDidMount() {
-        axios.get("/api/customer/me").then(({ data }) => {
+        axios.get("/api/customer/me/showCustomerData").then(({ data }) => {
             // console.log(data);
             this.setState({
                 customers: data,

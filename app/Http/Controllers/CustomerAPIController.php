@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class CustomerAPIController extends Controller
 {
-    public function me(){
+    public function showCustomerData(){
         $customer = Auth::guard('customer')->user();
         $data = $customer;
         return response()->json($data, 200);

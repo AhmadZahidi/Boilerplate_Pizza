@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Button from "./Button";
 import ShowDashboardClass from "./ShowDashboardClass";
 import ShowOrderHistory from "./ShowOrderHistory";
-import ShowUpdateProfile from "./ShowUpdateProfile";
+import ShowUpdateProfileClass from "./ShowUpdateProfileClass";
 
 const ProfileOption = () => {
     const [clickedDashboard, setClickedDashboard] = useState(true);
@@ -53,7 +53,7 @@ const ProfileOption = () => {
             <div className="col-9 bg-light ps-3 py-3">
                 {clickedDashboard && <ShowDashboardClass />}
                 {clickedOrder && <ShowOrderHistory />}
-                {clickedUpdate && <ShowUpdateProfile />}
+                {clickedUpdate && <ShowUpdateProfileClass />}
             </div>
         </div>
     );

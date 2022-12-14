@@ -26,7 +26,7 @@ Route::group(['middleware' => 'api'], function () {
 });
 
 Route::group(['middleware' => 'api', 'prefix' => 'customer'], function () {
-
+  Route::get('me/showCustomerData','CustomerAPIController@showCustomerData');
   Route::resource('me','CustomerAPIController');
   
   });
